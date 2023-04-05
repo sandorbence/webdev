@@ -13,6 +13,10 @@ h1 {
   color: #66BFBF;
 }
 
+img:hover {
+  background-color: black;
+}
+
 /*********************Class selector*********************/
 
 .image {
