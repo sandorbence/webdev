@@ -19,3 +19,9 @@ footer {
   color: midnightblue;
 }
 
+@media (min-width: 1601px) {
+  .tile-image {
+    float: left;
+  }
+
+}
