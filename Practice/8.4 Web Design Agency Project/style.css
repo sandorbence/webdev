@@ -19,9 +19,33 @@ footer {
   color: midnightblue;
 }
 
-@media (min-width: 1601px) {
-  .tile-image {
-    float: left;
-  }
+.creative {
+  color: midnightblue;
+  display: inline-block;
+  width: 50%;
+}
 
+.tile-image {
+  width: 20%;
+  float: left;
+}
+
+@media (max-width: 680px) {
+  .tile-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  h2 {
+    position: relative;
+    top: 10px;
+    font-size: 1.5rem;
+  }
+  .creative {
+    display: inline;
+  }
 }
