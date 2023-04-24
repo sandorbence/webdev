@@ -3,3 +3,4 @@ https://codepen.io/
 https://www.cssfontstack.com/
 https://fonts.google.com/
 https://www.flaticon.com/
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
