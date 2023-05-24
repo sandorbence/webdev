@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const apiKey = "57099e9c0700f99ff33082bc87a73e6d-us9";
+const apiKey = "fd39e086399f769abe5fcf3d23d96240-us9";
 const listId = "346860448d";
 
 app.get("/", function (req, res) {
@@ -22,7 +22,7 @@ app.post("/", function (req, res) {
   var data = {
     members: [
       {
-        email_adress: email,
+        email_address: email,
         status: "subscribed",
         merge_fields: {
           FNAME: firstName,
@@ -38,7 +38,7 @@ app.post("/", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "szani:57099e9c0700f99ff33082bc87a73e6d-us9",
+    auth: "szani:fd39e086399f769abe5fcf3d23d96240-us9",
   };
 
   const request = https.request(url, options, function (response) {
