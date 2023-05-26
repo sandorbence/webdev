@@ -5,21 +5,32 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+let items = ['asd', 'asd2', 'asd3'];
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
 
     let date = new Date();
-    let today = date.getDay()
-    let day = '';
+    let today = date.getDay();
 
-    if (today === 6 || today === 0) {
-        day = "the weekend";
+    let options = {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
     }
-    else {
-        day = "a weekday";
-    }
-    res.render('list', { day: day });
+
+    let day = date.toLocaleDateString('en-US', options);
+
+    res.render('list', { day: day, newListItems: items });
+});
+
+app.post('/', function (req, res) {
+    item = req.body.newItem;
+    items.push(item);
+    res.redirect('/');
 });
 
 app.listen(3000, function () {
